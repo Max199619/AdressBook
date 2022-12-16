@@ -43,7 +43,7 @@ public class AddressBook implements Initializable {
 
 
     /**
-     * Deletes the currently selected item from the contacts.
+     * Deletes the currently selected item from the contacts.<br>
      * The item can be a company and an individual contact.
      */
     public void DeleteContact(ActionEvent event) {
@@ -130,12 +130,12 @@ public class AddressBook implements Initializable {
     }
 
     /**
-     * Saves any changes made to the contact data and updates the database.\n
+     * Saves any changes made to the contact data and updates the database.<br>
      * There are three fields, which cannot be left empty:
-     *  \n-Name
-     *  \n-Surname
-     *  \n-Company\n
-     * Trying to update the database with these fields empty, will result in displaying an error.\n
+     * <br>-Name
+     * <br>-Surname
+     * <br>-Company<br>
+     * Trying to update the database with these fields empty, will result in displaying an error.<br>
      * If any other fields/areas will be left empty, NULL value will be passed to the database.
      */
     public void SaveContact(ActionEvent event) {
@@ -217,8 +217,8 @@ public class AddressBook implements Initializable {
 
     /**
      * Creates the tree - "contact list" from two lists, which are populated by methods:
-     *  \n-populateCompany()
-     *  \n-populateIndividualContacts()
+     *  <br>-populateCompany()
+     *  <br>-populateIndividualContacts()
      */
     private void createTheTree() {
         TreeItem<String> rootItem = new TreeItem<>("Contacts");
@@ -238,7 +238,7 @@ public class AddressBook implements Initializable {
 
 
     /**
-     * "Refreshes" the contact list, displayed as a tree view.
+     * "Refreshes" the contact list, displayed as a tree view.<br>
      * Used as initialization method and also after any change or addition to the contacts list, so that the list is up-to-date
      */
     private void refreshTree(){
@@ -294,13 +294,13 @@ public class AddressBook implements Initializable {
     }
 
     /**
+     * Checks if the field that we try to use with SQL query is not empty, if it is we use "setNull " to pass NULL value.<br>
+     * Otherwise, we use setString, to pass the actual value, input in the field.
+     *
      * @param field -> field which is being used in SQL query
      * @param position -> number of element "?", which is being substituted
      * @param ps -> prepared statement's name
-     * @throws SQLException
      *
-     * Checks if the field that we try to use with SQL query is not empty, if it is we use "setNull " to pass NULL value.\n
-     * Otherwise, we use setString, to pass the actual value, input in the field.
      */
     private void getField(TextField field, int position, PreparedStatement ps) throws SQLException {
         if (field.getText().isEmpty()){
@@ -310,12 +310,14 @@ public class AddressBook implements Initializable {
     }
 
     /**
+     * Checks if the area that we try to use with SQL query is not empty, if it is we use "setNull " to pass NULL value.<br>
+     * Otherwise, we use setString, to pass the actual value, input in the area.
+     *
      * @param area -> area which is being used in SQL query
      * @param position -> number of element "?", which is being substituted
      * @param ps -> prepared statement's name
-     * @throws SQLException
-     * Checks if the area that we try to use with SQL query is not empty, if it is we use "setNull " to pass NULL value.
-     * Otherwise, we use setString, to pass the actual value, input in the area.
+     *
+     *
      */
     private void getArea(TextArea area, int position, PreparedStatement ps) throws SQLException {
         if (area.getText().isEmpty()){

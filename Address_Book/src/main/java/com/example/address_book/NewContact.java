@@ -28,12 +28,12 @@ public class NewContact {
 
 
     /**
-     * Adds a contact to the database.
+     * Adds a contact to the database.<br>
      * Has the built-in check for mandatory field, which have to be filled in:
-     *  -Name
-     *  -Surname
-     *  -Company
-     * Has a safety feature built-in, which checks if the other fields are empty or not. If they are empty the error is displayed.
+     *  <br>-Name
+     *  <br>-Surname
+     *  <br>-Company
+     * Has a safety feature built-in, which checks if the other fields are empty or not. If they are empty the error is displayed.<br>
      * If the field is empty the NULL is sent to database, otherwise the actual input from the field or area is.
      */
     public void save_new_contact(ActionEvent event){
@@ -49,7 +49,6 @@ public class NewContact {
                 getField(phone_field,6,ps);
                 getField(phone_field,7,ps);
                 getArea(extra_info_area,8,ps);
-                System.out.println(ps.toString());
                 ps.execute();
                 System.out.println("Added contact");
             } catch (SQLException | NumberFormatException throwables) {
@@ -91,13 +90,12 @@ public class NewContact {
     }
 
     /**
+     * Checks if the field that we try to use with SQL query is not empty, if it is we use "setNull" to pass NULL value.<br>
+     * Otherwise, we use setString, to pass the actual value, input in the field.
+     *
      * @param field -> field which is being used in SQL query
      * @param position -> number of element "?", which is being substituted
      * @param ps -> prepared statement's name
-     * @throws SQLException
-     *
-     * Checks if the field that we try to use with SQL query is not empty, if it is we use "setNull " to pass NULL value.
-     * Otherwise, we use setString, to pass the actual value, input in the field.
      */
     private void getField(TextField field, int position, PreparedStatement ps) throws SQLException {
         if (field.getText().isEmpty()){
@@ -107,13 +105,13 @@ public class NewContact {
     }
 
     /**
-     * @param area -> area which is being used in SQL query
-     * @param position -> number of element "?", which is being substituted
-     * @param ps -> prepared statement's name
-     * @throws SQLException
-     *
-     * Checks if the area that we try to use with SQL query is not empty, if it is we use "setNull " to pass NULL value.
+     *Checks if the area that we try to use with SQL query is not empty, if it is we use "setNull" to pass NULL value.<br>
      * Otherwise, we use setString, to pass the actual value, input in the area.
+     *
+     * @param area -> area which is being used in SQL query;
+     * @param position -> number of element "?", which is being substituted;
+     * @param ps -> prepared statement's name;
+     *
      */
     private void getArea(TextArea area, int position, PreparedStatement ps) throws SQLException {
         if (area.getText().isEmpty()){
