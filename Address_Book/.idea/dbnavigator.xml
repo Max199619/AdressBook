@@ -5,38 +5,22 @@
     <value-preview-text-wrapping value="false" />
     <value-preview-pinned value="false" />
   </component>
-  <component name="DBNavigator.Project.DataExportManager">
-    <export-instructions>
-      <create-header value="true" />
-      <friendly-headers value="false" />
-      <quote-values-containing-separator value="true" />
-      <quote-all-values value="false" />
-      <value-separator value="" />
-      <file-name value="" />
-      <file-location value="" />
-      <scope value="GLOBAL" />
-      <destination value="FILE" />
-      <format value="EXCEL" />
-      <charset value="windows-1250" />
-      <charset value="windows-1250" />
-    </export-instructions>
-  </component>
   <component name="DBNavigator.Project.DatabaseBrowserManager">
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
-    <show-object-properties value="false" />
+    <show-object-properties value="true" />
     <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="30156636-4a81-4cd7-9c16-d12d55444277">
-      <console name="Local instance MySQL80" type="STANDARD" schema="bachelors" session="Main" />
+    <connection id="988fd401-5a79-46d8-8ec0-0e718192c3ad">
+      <console name="Adressbook" type="STANDARD" schema="address_book" session="Main" />
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
-    <filter-actions connection-id="30156636-4a81-4cd7-9c16-d12d55444277" dataset="bachelors.task" active-filter-id="" />
+    <filter-actions connection-id="988fd401-5a79-46d8-8ec0-0e718192c3ad" dataset="address_book.addressbook" active-filter-id="" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
@@ -44,16 +28,8 @@
   <component name="DBNavigator.Project.ExecutionManager">
     <retain-sticky-names value="false" />
   </component>
-  <component name="DBNavigator.Project.MethodExecutionManager">
-    <method-browser />
-    <execution-history>
-      <group-entries value="true" />
-      <execution-inputs />
-    </execution-history>
-    <argument-values-cache />
-  </component>
-  <component name="DBNavigator.Project.ObjectDependencyManager">
-    <last-used-dependency-type value="INCOMING" />
+  <component name="DBNavigator.Project.FileConnectionMappingManager">
+    <mapping file-url="file://$PROJECT_DIR$/src/main/java/com/example/address_book" connection-id="virtual-mysql-connection" session-id="MAIN" current-schema="" />
   </component>
   <component name="DBNavigator.Project.ObjectQuickFilterManager">
     <last-used-operator value="EQUAL" />
@@ -62,25 +38,22 @@
   <component name="DBNavigator.Project.ParserDiagnosticsManager">
     <diagnostics-history />
   </component>
-  <component name="DBNavigator.Project.ScriptExecutionManager" clear-outputs="true">
-    <recently-used-interfaces />
-  </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="30156636-4a81-4cd7-9c16-d12d55444277" active="true" signed="true">
+      <connection id="988fd401-5a79-46d8-8ec0-0e718192c3ad" active="true" signed="true">
         <database>
-          <name value="Local instance MySQL80" />
-          <description value="" />
+          <name value="Adressbook" />
+          <description value="DB for project addressbook" />
           <database-type value="MYSQL" />
           <config-type value="BASIC" />
           <database-version value="8.0" />
-          <driver-source value="EXTERNAL" />
-          <driver-library value="C:\Users\19dpr\OneDrive\Dokumenty\projekty_java\mysql-connector-j-8.0.31\mysql-connector-j-8.0.31.jar" />
-          <driver value="com.mysql.cj.jdbc.Driver" />
+          <driver-source value="BUILTIN" />
+          <driver-library value="" />
+          <driver value="" />
           <url-type value="DATABASE" />
           <host value="localhost" />
           <port value="3306" />
-          <database value="mysql" />
+          <database value="address_book" />
           <type value="USER_PASSWORD" />
           <user value="root" />
           <deprecated-pwd value="VGVzdC0xMjM0" />
@@ -549,8 +522,5 @@
         </visibility-settings>
       </environment>
     </general-settings>
-  </component>
-  <component name="DBNavigator.Project.StatementExecutionManager">
-    <execution-variables />
   </component>
 </project>

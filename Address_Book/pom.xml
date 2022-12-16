@@ -4,10 +4,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>myProjects.com</groupId>
-    <artifactId>AdressBook</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <name>AdressBook</name>
+    <groupId>com.example</groupId>
+    <artifactId>address_book</artifactId>
+    <version>1.0</version>
+    <name>address_book</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -15,11 +15,6 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>com.gluonhq</groupId>
-            <artifactId>gluonfx-maven-plugin</artifactId>
-            <version>1.0.16</version>
-        </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
@@ -64,11 +59,17 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>myprojects.com.adressbook/myprojects.com.adressbook.HelloApplication</mainClass>
+                            <mainClass>com.example.address_book/com.example.address_book.AddressBookApplication</mainClass>
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
         </plugins>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
     </build>
 </project>
