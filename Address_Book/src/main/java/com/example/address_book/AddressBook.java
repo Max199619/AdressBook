@@ -84,9 +84,6 @@ public class AddressBook implements Initializable {
                         ps.execute();
                         refreshTree();
                     }
-                    else{
-                        return;
-                    }
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }
@@ -106,7 +103,7 @@ public class AddressBook implements Initializable {
             stage.setScene(scene);
             stage.setTitle("New contact");
             stage.show();
-            stage.setOnHiding(action -> {refreshTree();});
+            stage.setOnHiding(action -> refreshTree());
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -133,12 +130,12 @@ public class AddressBook implements Initializable {
     }
 
     /**
-     * Saves any changes made to the contact data and updates the database.
+     * Saves any changes made to the contact data and updates the database.\n
      * There are three fields, which cannot be left empty:
-     *  -Name
-     *  -Surname
-     *  -Company
-     * Trying to update the database with these fields empty, will result in displaying an error.
+     *  \n-Name
+     *  \n-Surname
+     *  \n-Company\n
+     * Trying to update the database with these fields empty, will result in displaying an error.\n
      * If any other fields/areas will be left empty, NULL value will be passed to the database.
      */
     public void SaveContact(ActionEvent event) {
@@ -220,8 +217,8 @@ public class AddressBook implements Initializable {
 
     /**
      * Creates the tree - "contact list" from two lists, which are populated by methods:
-     *  -populateCompany()
-     *  -populateIndividualContacts()
+     *  \n-populateCompany()
+     *  \n-populateIndividualContacts()
      */
     private void createTheTree() {
         TreeItem<String> rootItem = new TreeItem<>("Contacts");
@@ -302,7 +299,7 @@ public class AddressBook implements Initializable {
      * @param ps -> prepared statement's name
      * @throws SQLException
      *
-     * Checks if the field that we try to use with SQL query is not empty, if it is we use "setNull " to pass NULL value.
+     * Checks if the field that we try to use with SQL query is not empty, if it is we use "setNull " to pass NULL value.\n
      * Otherwise, we use setString, to pass the actual value, input in the field.
      */
     private void getField(TextField field, int position, PreparedStatement ps) throws SQLException {
